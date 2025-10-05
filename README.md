@@ -25,7 +25,7 @@ pip install -r requirements.txt  # Optional: for LZF decompression
 python rdb_parser.py dump.rdb output.json --pretty --simple
 
 # With Redis Server - make sure you have backup.rdb file
-dokcer-compose up -d
+docker-compose up -d
 python3 export_from_redis.py output.json
 ```
 
