@@ -71,10 +71,17 @@ Output example (simplified JSON):
    pip install python-lzf  # Optional: For LZF decompression of strings
    ```
 
-3. **Run the Parser**:
+3.1. **Run the Parser Offline**:
    ```bash
    python rdb_parser.py /path/to/dump.rdb [output.json] [--pretty] [--simple]
    ```
+3.2. **Run the Parser with Redis Server**:
+   ```bash
+   docker-compose up -d
+   python3 export_from_redis.py output.json
+   ```
+
+
 
 ## 📖 Usage Examples
 
