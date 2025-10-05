@@ -20,8 +20,13 @@ A lightweight, **Python-based Redis RDB parser** that converts **Redis dump.rdb 
 Transform your Redis RDB dump into searchable JSON in seconds:
 
 ```bash
+# Without Redis
 pip install -r requirements.txt  # Optional: for LZF decompression
 python rdb_parser.py dump.rdb output.json --pretty --simple
+
+# With Redis Server - make sure you have backup.rdb file
+dokcer-compose up -d
+python3 export_from_redis.py output.json
 ```
 
 Output example (simplified JSON):
