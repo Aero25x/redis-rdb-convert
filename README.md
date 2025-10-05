@@ -1,11 +1,19 @@
 # Redis RDB to JSON Converter
 
+[![Join our Telegram RU](https://img.shields.io/badge/Telegram-RU-03A500?style=for-the-badge&logo=telegram&logoColor=white&labelColor=blue&color=red)](https://t.me/hidden_coding)
+[![Join our Telegram ENG](https://img.shields.io/badge/Telegram-EN-03A500?style=for-the-badge&logo=telegram&logoColor=white&labelColor=blue&color=red)](https://t.me/hidden_coding_en)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/aero25x)
+[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=x&logoColor=white)](https://x.com/aero25x)
+[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@flaming_chameleon)
+[![Reddit](https://img.shields.io/badge/Reddit-FF3A00?style=for-the-badge&logo=reddit&logoColor=white)](https://www.reddit.com/r/HiddenCode/)
+
+
+A lightweight, **Python-based Redis RDB parser** that converts **Redis dump.rdb files** to **JSON format**. Perfect for **migrating Redis data**, **backup analysis**, or **debugging Redis databases**. Supports **RDB version 12 (Redis 7.x)** with full parsing of strings, lists, sets, sorted sets (ZSET), hashes, streams, and more. SEO-optimized for developers searching for "Redis RDB to JSON converter" or "parse Redis RDB file".
+
 [![GitHub stars](https://img.shields.io/github/stars/aero25x/redis-rdb-convert?logo=github&style=flat-square)](https://github.com/aero25x/redis-rdb-convert/stargazers)
 [![Python Version](https://img.shields.io/badge/python-3.7%2B-blue?logo=python&style=flat-square)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 [![Issues](https://img.shields.io/github/issues/aero25x/redis-rdb-convert?color=red&style=flat-square)](https://github.com/aero25x/redis-rdb-convert/issues)
-
-A lightweight, **Python-based Redis RDB parser** that converts **Redis dump.rdb files** to **JSON format**. Perfect for **migrating Redis data**, **backup analysis**, or **debugging Redis databases**. Supports **RDB version 12 (Redis 7.x)** with full parsing of strings, lists, sets, sorted sets (ZSET), hashes, streams, and more. SEO-optimized for developers searching for "Redis RDB to JSON converter" or "parse Redis RDB file".
 
 ## 🚀 Quick Start
 
@@ -140,3 +148,11 @@ This **Redis RDB to JSON parser** is MIT-licensed. See [LICENSE](LICENSE) for de
 **Keywords**: Redis RDB parser, RDB to JSON, Redis dump converter, parse Redis backup, Redis 7 RDB, ziplist decoder, listpack parser.
 
 *Built with ❤️ for Redis devs. Star ⭐ if it saves your day!*
+
+
+[![Join our Telegram RU](https://img.shields.io/badge/Telegram-RU-03A500?style=for-the-badge&logo=telegram&logoColor=white&labelColor=blue&color=red)](https://t.me/hidden_coding)
+[![Join our Telegram ENG](https://img.shields.io/badge/Telegram-EN-03A500?style=for-the-badge&logo=telegram&logoColor=white&labelColor=blue&color=red)](https://t.me/hidden_coding_en)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/aero25x)
+[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=x&logoColor=white)](https://x.com/aero25x)
+[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@flaming_chameleon)
+[![Reddit](https://img.shields.io/badge/Reddit-FF3A00?style=for-the-badge&logo=reddit&logoColor=white)](https://www.reddit.com/r/HiddenCode/)
