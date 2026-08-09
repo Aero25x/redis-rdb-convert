@@ -151,7 +151,7 @@ class RDBParser:
                 try:
                     # Try to decompress (LZF is not standard, but try common approaches)
                     uncompressed = self.lzf_decompress(compressed_data, uncompressed_len)
-                    return uncompressed.decode('utf-8', errors='replace')
+                    return uncompressed.decode('utf-8', errors='surrogateescape')
                 except:
                     return f"<compressed:{compressed_len} bytes>"
             else:
@@ -171,7 +171,7 @@ class RDBParser:
                 return f"<invalid_length:{length}>"
             data = self.read_bytes(length)
             try:
-                return data.decode('utf-8', errors='replace')
+                return data.decode('utf-8', errors='surrogateescape')
             except:
                 # If decode fails, return hex
                 try:
@@ -427,7 +427,7 @@ class RDBParser:
             length = encoding & 0x3F
             if offset + length > len(data):
                 return None, 0
-            value = data[offset:offset + length].decode('utf-8', errors='replace')
+            value = data[offset:offset + length].decode('utf-8', errors='surrogateescape')
             return value, offset + length
 
         elif (encoding & 0xC0) == 0x40:
@@ -438,7 +438,7 @@ class RDBParser:
             offset += 1
             if offset + length > len(data):
                 return None, 0
-            value = data[offset:offset + length].decode('utf-8', errors='replace')
+            value = data[offset:offset + length].decode('utf-8', errors='surrogateescape')
             return value, offset + length
 
         elif (encoding & 0xC0) == 0x80:
@@ -449,7 +449,7 @@ class RDBParser:
             offset += 4
             if offset + length > len(data):
                 return None, 0
-            value = data[offset:offset + length].decode('utf-8', errors='replace')
+            value = data[offset:offset + length].decode('utf-8', errors='surrogateescape')
             return value, offset + length
 
         # Integer encodings
@@ -565,7 +565,7 @@ class RDBParser:
             # String of given length
             if len(data) < 1 + length + 1:
                 return None, 0
-            value = data[1:1 + length].decode('utf-8', errors='replace')
+            value = data[1:1 + length].decode('utf-8', errors='surrogateescape')
             # Last byte is backlen (total entry size)
             backlen = data[1 + length]
             total_size = 1 + length + 1
@@ -597,7 +597,7 @@ class RDBParser:
             length = ((byte & 0x3F) << 8) | data[1]
             if len(data) < 2 + length + 1:
                 return None, 0
-            value = data[2:2 + length].decode('utf-8', errors='replace')
+            value = data[2:2 + length].decode('utf-8', errors='surrogateescape')
             backlen = data[2 + length]
             total_size = 2 + length + 1
             return value, total_size
@@ -649,7 +649,7 @@ class RDBParser:
                 length = struct.unpack('<I', data[1:5])[0]
                 if len(data) < 5 + length + 1:
                     return None, 0
-                value = data[5:5 + length].decode('utf-8', errors='replace')
+                value = data[5:5 + length].decode('utf-8', errors='surrogateescape')
                 backlen = data[5 + length]
                 total_size = 5 + length + 1
                 return value, total_size
